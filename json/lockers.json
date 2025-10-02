@@ -1,0 +1,12 @@
+[
+  { "lockerNumber": 1, "size": "small", "isFree": true },
+  { "lockerNumber": 2, "size": "medium", "isFree": false },
+  { "lockerNumber": 3, "size": "large", "isFree": true },
+  { "lockerNumber": 4, "size": "small", "isFree": false },
+  { "lockerNumber": 5, "size": "medium", "isFree": true },
+  { "lockerNumber": 6, "size": "large", "isFree": false },
+  { "lockerNumber": 7, "size": "small", "isFree": true },
+  { "lockerNumber": 8, "size": "medium", "isFree": true },
+  { "lockerNumber": 9, "size": "large", "isFree": false },
+  { "lockerNumber": 10, "size": "medium", "isFree": true }
+]
