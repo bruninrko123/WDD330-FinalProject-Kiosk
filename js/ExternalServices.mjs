@@ -21,12 +21,22 @@ export default class ExternalServices {
 
 
     async getData() {
-        const response = await fetch('../json/lockers.json');
-        const data = await convertToJson(response);
-        return data;
+        
 
-       
+        const response = await fetch('http://localhost:3000/api/lockers');
+        try {
+            if (!response.ok) {
+                throw new Error("error fetching lockers");
+                
+            }
 
+            const data = await convertToJson(response);
+            
+          
+            return data
+        } catch (err) {
+            console.log("error fetching", err);
+        }
 
 
     }
