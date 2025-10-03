@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Pastel de Queijo",
+    "category": "food",
+    "price": 12,
+    "description": "Crispy fried pastry filled with cheese."
+  },
+  {
+    "id": 2,
+    "name": "Pastel de Carne",
+    "category": "food",
+    "price": 12,
+    "description": "Golden fried pastry stuffed with seasoned beef."
+  },
+  {
+    "id": 3,
+    "name": "Açaí na Tigela",
+    "category": "food",
+    "price": 18,
+    "description": "Refreshing açaí bowl with granola and banana."
+  },
+  {
+    "id": 4,
+    "name": "Queijo Coalho no Espeto",
+    "category": "food",
+    "price": 10,
+    "description": "Grilled skewered cheese, lightly salted."
+  },
+  {
+    "id": 5,
+    "name": "Camarão Frito",
+    "category": "food",
+    "price": 25,
+    "description": "Crispy fried shrimp served with lime."
+  },
+  {
+    "id": 6,
+    "name": "Milho Verde Cozido",
+    "category": "food",
+    "price": 8,
+    "description": "Boiled corn on the cob with butter and salt."
+  },
+  {
+    "id": 7,
+    "name": "Coxinha de Frango",
+    "category": "food",
+    "price": 10,
+    "description": "Fried chicken croquette with creamy filling."
+  },
+  {
+    "id": 8,
+    "name": "Bolinhos de Bacalhau",
+    "category": "food",
+    "price": 20,
+    "description": "Codfish fritters, crunchy outside, soft inside."
+  },
+  {
+    "id": 9,
+    "name": "Tapioca Recheada",
+    "category": "food",
+    "price": 15,
+    "description": "Tapioca pancake with sweet or savory fillings."
+  },
+  {
+    "id": 10,
+    "name": "Batata Frita",
+    "category": "food",
+    "price": 18,
+    "description": "Golden crispy French fries, perfect to share."
+  },
+  {
+    "id": 11,
+    "name": "Água de Coco",
+    "category": "drink",
+    "price": 7,
+    "description": "Fresh coconut water served straight from the coconut."
+  },
+  {
+    "id": 12,
+    "name": "Suco de Laranja Natural",
+    "category": "drink",
+    "price": 10,
+    "description": "Freshly squeezed orange juice."
+  },
+  {
+    "id": 13,
+    "name": "Refrigerante",
+    "category": "drink",
+    "price": 8,
+    "description": "Assorted soft drinks, served cold."
+  },
+  {
+    "id": 14,
+    "name": "Suco de Maracujá",
+    "category": "drink",
+    "price": 12,
+    "description": "Refreshing passion fruit juice."
+  },
+  {
+    "id": 15,
+    "name": "Mate Gelado",
+    "category": "drink",
+    "price": 9,
+    "description": "Iced Brazilian mate tea, slightly sweetened."
+  }
+]

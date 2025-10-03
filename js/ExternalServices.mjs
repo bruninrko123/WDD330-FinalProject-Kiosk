@@ -20,10 +20,10 @@ export default class ExternalServices {
     
 
 
-    async getData() {
+    async getData(category) {
         
 
-         const response = await fetch("../json/lockers.json");
+         const response = await fetch(`../json/${category}.json`);
          const data = await convertToJson(response);
          return data;
 

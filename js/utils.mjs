@@ -1,4 +1,13 @@
-export function renderListWithTemplate(templateFn, parentElement, list, position ="afterBegin", clear = false){
+export function getParam(param) {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const service = urlParams.get(param);
+
+    return service;
+}
+
+
+export function renderListWithTemplate(templateFn, parentElement, list, position = "afterBegin", clear = false) {
     console.log(list);
     const htmlStrings = list.map(templateFn);
 
