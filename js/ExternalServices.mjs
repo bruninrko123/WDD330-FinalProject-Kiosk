@@ -29,6 +29,13 @@ export default class ExternalServices {
 
     }
 
+    async callNewsAPI() {
+        const response = await fetch(
+          "https://newsapi.org/v2/everything?q=Apple&from=2025-10-04&sortBy=popularity&apiKey=c0403516282d42d1be18381f56a752d7"
+        );
+
+        console.log(response);
+    }
 
     
 }
