@@ -6,6 +6,15 @@ export function getParam(param) {
     return service;
 }
 
+export async function convertToJson(res) {
+  const jsonData = await res.json();
+  if (res.ok) {
+    return jsonData;
+  } else {
+    throw { name: "External Services Error:", message: jsonData };
+  }
+}
+
 
 export function renderListWithTemplate(templateFn, parentElement, list, position = "afterBegin", clear = false) {
     console.log(list);
