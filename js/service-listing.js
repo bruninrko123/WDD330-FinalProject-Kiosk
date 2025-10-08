@@ -1,4 +1,5 @@
 import ExternalServices from "./ExternalServices.mjs";
+import OrderDetails from "./OrderDetails.mjs";
 import ServiceList from "./ServiceList.mjs";
 import { loadHeaderfooter, getParam } from "./utils.mjs";
 
@@ -14,6 +15,11 @@ const listElement = document.querySelector(".listing")
 const lockerList = new ServiceList(category , dataSource, listElement);
 
 lockerList.init()
+
+
+// dialoge
+
+
 
 // menu
 

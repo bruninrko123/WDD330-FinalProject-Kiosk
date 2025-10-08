@@ -5,6 +5,8 @@
     "category": "food",
     "price": 12,
     "description": "Crispy fried pastry filled with cheese.",
+    "nutritionalInfo": "Approximately 250 kcal per piece. High in fat and protein from cheese, moderate carbs from pastry.",
+    "ingredients": ["Wheat flour", "Cheese", "Water", "Salt", "Oil for frying"],
     "image": "../images/products/pastel-queijo.png"
   },
   {
@@ -13,6 +15,15 @@
     "category": "food",
     "price": 12,
     "description": "Golden fried pastry stuffed with seasoned beef.",
+    "nutritionalInfo": "Approximately 260 kcal per piece. High in protein and fat, moderate carbs from pastry.",
+    "ingredients": [
+      "Wheat flour",
+      "Ground beef",
+      "Onion",
+      "Garlic",
+      "Salt",
+      "Oil for frying"
+    ],
     "image": "../images/products/pastel-carne.png"
   },
   {
@@ -21,6 +32,8 @@
     "category": "food",
     "price": 18,
     "description": "Refreshing açaí bowl with granola and banana.",
+    "nutritionalInfo": "About 350 kcal per bowl. High in antioxidants, fiber from granola and banana, natural sugars present.",
+    "ingredients": ["Açaí pulp", "Granola", "Banana", "Honey (optional)"],
     "image": "../images/products/acai-tigela.png"
   },
   {
@@ -29,6 +42,8 @@
     "category": "food",
     "price": 10,
     "description": "Grilled skewered cheese, lightly salted.",
+    "nutritionalInfo": "Around 150 kcal per skewer. High in protein and calcium, moderate fat, low carbs.",
+    "ingredients": ["Queijo coalho (cheese)", "Salt", "Wooden skewer"],
     "image": "../images/products/queijo-espeto.png"
   },
   {
@@ -37,6 +52,16 @@
     "category": "food",
     "price": 25,
     "description": "Crispy fried shrimp served with lime.",
+    "nutritionalInfo": "Approximately 200 kcal per serving. High in protein, moderate fat from frying, low carbs.",
+    "ingredients": [
+      "Shrimp",
+      "Flour",
+      "Eggs",
+      "Bread crumbs",
+      "Oil for frying",
+      "Salt",
+      "Lime"
+    ],
     "image": "../images/products/camarao-frito.png"
   },
   {
@@ -45,6 +70,8 @@
     "category": "food",
     "price": 8,
     "description": "Boiled corn on the cob with butter and salt.",
+    "nutritionalInfo": "About 120 kcal per cob. Good source of fiber, vitamins, and carbohydrates; moderate fat if butter is added.",
+    "ingredients": ["Corn on the cob", "Water", "Salt", "Butter"],
     "image": "../images/products/milho.png"
   },
   {
@@ -53,6 +80,18 @@
     "category": "food",
     "price": 10,
     "description": "Fried chicken croquette with creamy filling.",
+    "nutritionalInfo": "Approximately 180 kcal per piece. High in protein, moderate fat, and carbs from dough.",
+    "ingredients": [
+      "Shredded chicken",
+      "Cream cheese",
+      "Wheat flour",
+      "Eggs",
+      "Breadcrumbs",
+      "Oil for frying",
+      "Salt",
+      "Onion",
+      "Garlic"
+    ],
     "image": "../images/products/coxinha-frango.png"
   },
   {
@@ -61,6 +100,17 @@
     "category": "food",
     "price": 20,
     "description": "Codfish fritters, crunchy outside, soft inside.",
+    "nutritionalInfo": "Around 220 kcal per serving. High in protein, moderate fat, contains some carbs from coating.",
+    "ingredients": [
+      "Salted codfish",
+      "Potatoes",
+      "Eggs",
+      "Parsley",
+      "Onion",
+      "Oil for frying",
+      "Salt",
+      "Pepper"
+    ],
     "image": "../images/products/bolinho-bacalhau.png"
   },
   {
@@ -69,6 +119,13 @@
     "category": "food",
     "price": 15,
     "description": "Tapioca pancake with sweet or savory fillings.",
+    "nutritionalInfo": "Approximately 200 kcal per serving. Gluten-free, moderate carbs, protein varies depending on filling, low fat for plain tapioca.",
+    "ingredients": [
+      "Tapioca starch",
+      "Water",
+      "Salt",
+      "Filling (cheese, ham, chocolate, etc.)"
+    ],
     "image": "../images/products/tapioca-recheada.png"
   },
   {
@@ -77,6 +134,8 @@
     "category": "food",
     "price": 18,
     "description": "Golden crispy French fries, perfect to share.",
+    "nutritionalInfo": "Around 300 kcal per serving. High in carbs and fat, low protein, contains some sodium.",
+    "ingredients": ["Potatoes", "Oil for frying", "Salt"],
     "image": "../images/products/batata-frita.png"
   },
   {
@@ -85,6 +144,8 @@
     "category": "drink",
     "price": 7,
     "description": "Fresh coconut water served straight from the coconut.",
+    "nutritionalInfo": "About 45 kcal per glass (200ml). Low in fat, contains natural electrolytes like potassium and sodium, low sugar.",
+    "ingredients": ["Fresh coconut water"],
     "image": "../images/products/agua-coco.png"
   },
   {
@@ -93,6 +154,8 @@
     "category": "drink",
     "price": 10,
     "description": "Freshly squeezed orange juice.",
+    "nutritionalInfo": "Approximately 110 kcal per glass (250ml). Rich in vitamin C, contains natural sugars, low fat.",
+    "ingredients": ["Fresh oranges"],
     "image": "../images/products/suco-laranja.png"
   },
   {
@@ -101,6 +164,14 @@
     "category": "drink",
     "price": 8,
     "description": "Assorted soft drinks, served cold.",
+    "nutritionalInfo": "About 140 kcal per can (350ml). High in sugar, no protein, low micronutrients, contains carbonation.",
+    "ingredients": [
+      "Carbonated water",
+      "Sugar",
+      "Artificial flavor",
+      "Coloring agents",
+      "Acidulant (citric acid)"
+    ],
     "image": "../images/products/refrigerante.png"
   },
   {
@@ -109,6 +180,8 @@
     "category": "drink",
     "price": 12,
     "description": "Refreshing passion fruit juice.",
+    "nutritionalInfo": "Approximately 100 kcal per glass (250ml). Good source of vitamin C and antioxidants, moderate natural sugars, low fat.",
+    "ingredients": ["Passion fruit pulp", "Water", "Sugar (optional)"],
     "image": "../images/products/suco-maracuja.png"
   },
   {
@@ -117,6 +190,8 @@
     "category": "drink",
     "price": 9,
     "description": "Iced Brazilian mate tea, slightly sweetened.",
+    "nutritionalInfo": "About 50 kcal per glass (200ml). Low in fat, contains caffeine and antioxidants, moderate sugar if sweetened.",
+    "ingredients": ["Yerba mate", "Water", "Sugar (optional)", "Ice"],
     "image": "../images/products/mate-gelado.png"
   }
 ]

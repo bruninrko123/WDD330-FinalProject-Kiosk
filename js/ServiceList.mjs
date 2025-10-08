@@ -1,4 +1,4 @@
-import { renderListWithTemplate } from "./utils.mjs";
+import { renderListWithTemplate, renderWithTemplate } from "./utils.mjs";
 
 function lockersTemplate(locker) {
   return `
@@ -7,14 +7,20 @@ function lockersTemplate(locker) {
 
 function foodTemplate(food) {
   return `
-     <ul class="food-card">
-     <img src="${food.image}" alt="${food.name}" width="300" heigth="300"> 
+  <a href= '/service-pages/index.html?food=${food.id}'>
+  <ul class="food-card">
+  
+     <img src="${food.image}" alt="${food.name}" width="300" height="300"> 
      <h3>${food.name} - ${food.price}</h3>
-            <p>${food.description}</p>
-            
-        </ul>
+     <p>${food.description}</p>
+     
+     </ul>
+     </a>      
     `;
 }
+
+
+
 
 export default class ServiceList {
   constructor(category, dataSource, listElement) {
@@ -28,6 +34,8 @@ export default class ServiceList {
     console.log(listOfServices);
     this.renderService(listOfServices);
   }
+
+  
 
   renderService(serviceList) {
     if (this.category === "lockers") {
@@ -57,20 +65,18 @@ export default class ServiceList {
             "afterBegin",
             true
           );
-          }
-          
-        else if (type.value === "Drinks") {
-            const filteredList = serviceList.filter(
-              (item) => item.category === "drink"
-            );
-            renderListWithTemplate(
-              foodTemplate,
-              this.listElement,
-              filteredList,
-              "afterBegin",
-              true
-            );
-          }
+        } else if (type.value === "Drinks") {
+          const filteredList = serviceList.filter(
+            (item) => item.category === "drink"
+          );
+          renderListWithTemplate(
+            foodTemplate,
+            this.listElement,
+            filteredList,
+            "afterBegin",
+            true
+          );
+        }
       });
     }
   }
