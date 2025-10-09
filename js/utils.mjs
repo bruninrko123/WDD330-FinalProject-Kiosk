@@ -20,6 +20,15 @@ export function setLocalStorage(key, data){
   localStorage.setItem(key, JSON.stringify(data));
 }
 
+export function getLocalStorage(key) {
+  try {
+    const items = JSON.parse(localStorage.getItem(key));
+    return Array.isArray(items) ? items : [];
+  }
+  catch {
+    return [];
+  }
+}
 
 export function renderListWithTemplate(templateFn, parentElement, list, position = "afterBegin", clear = false) {
     console.log(list);
