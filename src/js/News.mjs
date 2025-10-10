@@ -24,10 +24,11 @@ export default class News {
       const date = new Date();
       console.log(date.toISOString().split("T")[0].slice(0, 7));
       const newsDate = date.toISOString().split("T")[0].slice(0, 7);
-        // const query = 'Rio de Janeiro (Turismo)';
+      // const query = 'Rio de Janeiro (Turismo)';
+      const proxy = "https://cors-anywhere.herokuapp.com/";;
         const APIKey = "c0403516282d42d1be18381f56a752d7";
         const url = `https://newsapi.org/v2/everything?q=${this.query}&from=${newsDate}&sortBy=popularity&apiKey=${APIKey}`;
-        const response = await fetch(url);
+        const response = await fetch(proxy + url);
         
         const data = await convertToJson(response);
         console.log(data);
