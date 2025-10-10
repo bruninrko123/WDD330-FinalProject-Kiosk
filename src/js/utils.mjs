@@ -55,7 +55,7 @@ export async function loadTemplate(path){
 
 export async function loadHeaderfooter() {
     const headerTemplate = await loadTemplate(
-      "/WDD330-FinalProject-Kiosk//WDD330-FinalProject-Kiosk//partials/header.html"
+      "/WDD330-FinalProject-Kiosk//WDD330-FinalProject-Kiosk/partials/header.html"
     );
 
     const headerElement = document.querySelector('.header');
@@ -63,7 +63,7 @@ export async function loadHeaderfooter() {
     renderWithTemplate(headerTemplate, headerElement);
 
     const footerTemplate = await loadTemplate(
-      "/WDD330-FinalProject-Kiosk//partials/footer.html"
+      "/WDD330-FinalProject-Kiosk/partials/footer.html"
     );
 
     const footerElement = document.querySelector('.footer');
