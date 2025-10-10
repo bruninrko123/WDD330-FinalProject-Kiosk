@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>finalproject</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/service_listing.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header"></header>
+
+    <main>
+      <form action="">
+        <fieldset>
+          Personal info:
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required />
+
+          <label for="lastname">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required />
+
+          <label for="whatsapp">What's App number:</label>
+          <input type="number" id="whatsapp" name="whatsapp" required />
+        </fieldset>
+        <fieldset>
+          Lockers:
+          <label for="lockers"></label>
+          <select name="lockers" id="lockers" class="listing"></select>
+        </fieldset>
+
+        <fieldset>Chairs:</fieldset>
+      </form>
+    </main>
+
+    <footer class="footer"></footer>
+  </body>
+</html>

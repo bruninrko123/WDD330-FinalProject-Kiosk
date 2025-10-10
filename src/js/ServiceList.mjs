@@ -7,7 +7,7 @@ function lockersTemplate(locker) {
 
 function foodTemplate(food) {
   return `
-  <a href= '/service-pages/index.html?food=${food.id}'>
+  <a href= '/service_pages/index.html?food=${food.id}'>
   <ul class="food-card">
   
      <img src="${food.image}" alt="${food.name}" width="300" height="300"> 
