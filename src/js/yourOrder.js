@@ -11,9 +11,12 @@ function renderOrderContent(){
 
 function orderItemTemplate(item) {
     return `
-    <img src="${item.image}" alt="${item.name}" width="300" height="300"> 
-     <h3>${item.name} - ${item.price}</h3>
-     <p>${item.description}</p>`;
+    <section class="foodCard">
+    <img class="image" src="${item.image}" alt="${item.name}" width="300" height="300"> 
+     <h3 class="foodName">${item.name} - ${item.price}</h3>
+     <p class="description">${item.description}</p>
+     <p class="quantity">Portions: ${item.quantity}</p>
+     </section>`;
     
 }   
 
