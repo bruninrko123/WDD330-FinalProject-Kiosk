@@ -25,21 +25,31 @@ export default class News {
       console.log(date.toISOString().split("T")[0].slice(0, 7));
       const newsDate = date.toISOString().split("T")[0].slice(0, 7);
       // const query = 'Rio de Janeiro (Turismo)';
-      const proxy = "https://cors-anywhere.herokuapp.com/";;
-        const APIKey = "c0403516282d42d1be18381f56a752d7";
-        const url = `https://newsapi.org/v2/everything?q=${this.query}&from=${newsDate}&sortBy=popularity&apiKey=${APIKey}`;
-        const response = await fetch(proxy + url);
-        
+      
+        // const APIKey = "c0403516282d42d1be18381f56a752d7";
+      
+      // const url = `https://newsapi.org/v2/everything?q=${this.query}&from=${newsDate}&sortBy=popularity&apiKey=${APIKey}`;
+      
+      try {
+        const APIKey = "kMAugHN4pUx8LaT98AqMx1j0XyBRredM0WP5M2g4FvH583ZB";
+        const url =
+          "https://api.currentsapi.services/v1/latest-news?" +
+          "language=pt&" +
+          `apiKey=${APIKey}`;
+
+        const response = await fetch(url);
+        console.log(response);
         const data = await convertToJson(response);
         console.log(data);
-        data.articles.forEach(article => {
-            
-            news.push(article);
-            // news.push(article.title);
-            // this.text.push(article.content);
-            
+        data.articles.forEach((article) => {
+          news.push(article);
+          // news.push(article.title);
+          // this.text.push(article.content);
         });
         return news;
+      } catch (err) {
+        console.log("something went wrong fetching from the API",err);
+      }
     }
 
     displayNews(news) {

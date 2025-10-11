@@ -1,0 +1,31 @@
+
+main{
+    margin-top: 20px;
+}
+
+.image{grid-area: image;
+width: 150px;
+height: 150px;}
+
+.foodName{grid-area: foodName;}
+
+.description{grid-area: description;}
+
+.quantity{grid-area: quantity;}
+
+.orderItems{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.foodCard{
+    border: 1px solid black;
+    width: 600px;
+    height: 150px;
+    display: grid;
+    grid-template-areas: 
+    "image foodName foodName"
+    "image description quantity"
+    ;
+}

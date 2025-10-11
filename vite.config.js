@@ -15,6 +15,7 @@ export default defineConfig({
         service_listing: resolve(__dirname, "src/service_listing/index.html"),
         menu: resolve(__dirname, "src/service_listing/menu.html"),
         service_pages: resolve(__dirname, "src/service_pages/index.html"),
+        
       },
     },
   },
