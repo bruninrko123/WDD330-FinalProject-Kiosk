@@ -71,6 +71,12 @@ header{
         }
     }
 
+    & .links{
+        
+        font-size: 3rem;
+        color: #005f6a;
+    }
+
     & .service-categories{
         display: flex;
         justify-content: space-between;
