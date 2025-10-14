@@ -1,4 +1,4 @@
-import { setLocalStorage, getLocalStorage } from "./utils.mjs";
+import { setLocalStorage, getLocalStorage, convertToJson } from "./utils.mjs";
 
 export default class OrderDetails {
   constructor(foodId, parentElement) {
@@ -16,14 +16,18 @@ export default class OrderDetails {
     const specificFood = data.find((food) => food.id === asNumber);
     console.log(specificFood);
     this.food = specificFood;
+    
       this.renderFoodDetails();
       
       document.querySelector('.add').addEventListener('click', () => {
-          this.addFoodToOrder(this.food);
+        this.addFoodToOrder(this.food);
+        
       });
   }
 
-  addFoodToOrder() {
+  
+
+   addFoodToOrder() {
     const orderItems = getLocalStorage("food-cart");
     
     const found = orderItems.find(item => item.id === this.food.id);
@@ -45,7 +49,33 @@ export default class OrderDetails {
   renderFoodDetails() {
     dialogtemplate(this.food);
   }
+
+  
 }
+
+async function currency(amount) {
+    
+    try {
+        
+        
+        const APIKey = "Dw9UjYZfbADgShsOYuMrgWPnnzm8WRHI";
+
+        const url = `https://api.currencybeacon.com/v1/convert?api_key=${APIKey}&from=BRL&to=USD&amount=${amount}`;
+
+        const response = await fetch(url);
+        console.log(response);
+
+        const data = await convertToJson(response);
+        console.log(data);
+        const convertedValue = data.value;
+        console.log(convertedValue);
+        return convertedValue;
+        
+    } catch (err) {
+        console.log("error loading currency api", err);
+    }
+}
+
 
 function dialogtemplate(food) {
   // return `
@@ -59,20 +89,23 @@ function dialogtemplate(food) {
   const h3 = document.createElement("h3");
   const p = document.createElement("p");
   const p2 = document.createElement("p");
+  const p3 = document.createElement("p");
   const ul = document.createElement("ul");
   const addButton = document.createElement("button");
   addButton.classList.add("add")  
   img.src = food.image;
   img.alt = food.name;
-  h3.textContent = `${food.name} - ${food.price}`;
+  h3.textContent = `${food.name} - R$${food.price}`;
   p.textContent = food.description;
-  p2.textContent = food.nutritionalInfo;
+  p2.innerHTML = `<strong>Nutrional info:</strong> ${food.nutritionalInfo}`;
     addButton.textContent = "Add to the order";
-
+  p3.innerHTML = `<strong>Ingredients:</strong>`;
   food.ingredients.forEach((ingredient) => {
     let li = document.createElement("li");
     li.textContent = ingredient;
     ul.appendChild(li);
   });
-  show.append(img, h3, p, p2, ul, addButton);
+  show.append(img, h3, p2, p3, ul, addButton);
+
+  
 }

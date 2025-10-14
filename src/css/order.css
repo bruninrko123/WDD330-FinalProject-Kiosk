@@ -29,3 +29,14 @@ height: 150px;}
     "image description quantity"
     ;
 }
+
+.total{
+    width: 350px;
+    
+    background-color: #b87333;
+    & p{
+        font-size: 2rem;
+        padding: 5px;
+        
+    }
+}
