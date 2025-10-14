@@ -41,7 +41,7 @@ export default class News {
         console.log(response);
         const data = await convertToJson(response);
         console.log(data);
-        data.articles.forEach((article) => {
+        data.news.forEach((article) => {
           news.push(article);
           // news.push(article.title);
           // this.text.push(article.content);
@@ -61,14 +61,14 @@ export default class News {
 
       // content
       const img = document.createElement("img");
-        img.src = news[this.counter].urlToImage;
+        img.src = news[this.counter].image;
         img.style.width = "600px";
         this.newsElement.appendChild(img);
         
         //source 
         const source = document.createElement('p');
-        source.innerHTML = `Source: ${news[this.counter].source.name} <br> 
-        <a href="${news[this.counter].url}">${news[this.counter].url}</a>`;
+        // source.innerHTML = `Source: ${news[this.counter].source.name} <br> 
+        source.innerHTML = `<a href="${news[this.counter].url}">${news[this.counter].url}</a>`;
         this.newsElement.appendChild(source);
 
       this.nextButton.addEventListener("click", () => {
@@ -83,14 +83,16 @@ export default class News {
 
           // content
           const img = document.createElement("img");
-          img.src = news[this.counter].urlToImage;
+          img.src = news[this.counter].image;
           img.style.width = "600px";
           this.newsElement.appendChild(img);
 
           //source
           const source = document.createElement("p");
-          source.innerHTML = `Source: ${news[this.counter].source.name} <br> 
-        <a href="${news[this.counter].url}">${news[this.counter].url}</a>`;
+          // source.innerHTML = `Source: ${news[this.counter].source.name} <br>
+          source.innerHTML = `<a href="${news[this.counter].url}">${
+            news[this.counter].url
+          }</a>`;
           this.newsElement.appendChild(source);
         }
       });
@@ -106,14 +108,16 @@ export default class News {
 
           // content
           const img = document.createElement("img");
-          img.src = news[this.counter].urlToImage;
+          img.src = news[this.counter].image;
           img.style.width = "600px";
           this.newsElement.appendChild(img);
 
           //source
           const source = document.createElement("p");
-          source.innerHTML = `Source: ${news[this.counter].source.name} <br> 
-        <a href="${news[this.counter].url}">${news[this.counter].url}</a>`;
+          // source.innerHTML = `Source: ${news[this.counter].source.name} <br>
+          source.innerHTML = `<a href="${news[this.counter].url}">${
+            news[this.counter].url
+          }</a>`;
           this.newsElement.appendChild(source);
         }
       });
