@@ -1,6 +1,9 @@
 
 main{
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .image{grid-area: image;
@@ -32,7 +35,7 @@ height: 150px;}
 
 .total{
     width: 350px;
-    
+    height: 150px;
     background-color: #b87333;
     & p{
         font-size: 2rem;

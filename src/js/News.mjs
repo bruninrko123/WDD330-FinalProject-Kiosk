@@ -52,9 +52,12 @@ export default class News {
       }
     }
 
-    displayNews(news) {
+  displayNews(news) {
+      
+    // handling it when the page first render
+    // this is the first news that will appear on the page
       console.log(news);
-      // console.log(this.news);
+      
       const h2 = document.createElement("h2");
       h2.textContent = news[this.counter].title;
       this.newsElement.appendChild(h2);
@@ -63,14 +66,16 @@ export default class News {
       const img = document.createElement("img");
         img.src = news[this.counter].image;
         img.style.width = "600px";
+        img.alt = `Image for the following news: ${news[this.counter].title}`;
         this.newsElement.appendChild(img);
         
         //source 
         const source = document.createElement('p');
-        // source.innerHTML = `Source: ${news[this.counter].source.name} <br> 
+         
         source.innerHTML = `<a href="${news[this.counter].url}">${news[this.counter].url}</a>`;
         this.newsElement.appendChild(source);
 
+       // handling the user clicking to go to the next news 
       this.nextButton.addEventListener("click", () => {
         if (this.counter < news.length - 1) {
           this.newsElement.innerHTML = ``;
@@ -89,13 +94,14 @@ export default class News {
 
           //source
           const source = document.createElement("p");
-          // source.innerHTML = `Source: ${news[this.counter].source.name} <br>
+          
           source.innerHTML = `<a href="${news[this.counter].url}">${
             news[this.counter].url
           }</a>`;
           this.newsElement.appendChild(source);
         }
       });
+    // handling the user clicking to return to the previous news
       this.prevButton.addEventListener("click", () => {
         if (this.counter > 0) {
           this.newsElement.innerHTML = ``;
@@ -114,7 +120,7 @@ export default class News {
 
           //source
           const source = document.createElement("p");
-          // source.innerHTML = `Source: ${news[this.counter].source.name} <br>
+          
           source.innerHTML = `<a href="${news[this.counter].url}">${
             news[this.counter].url
           }</a>`;
