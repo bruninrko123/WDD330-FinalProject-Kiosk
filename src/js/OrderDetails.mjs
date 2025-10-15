@@ -21,7 +21,8 @@ export default class OrderDetails {
       
       document.querySelector('.add').addEventListener('click', () => {
         this.addFoodToOrder(this.food);
-        
+        window.location.href =
+          "/WDD330-FinalProject-Kiosk/service_listing/menu.html?service=menu";
       });
   }
 
