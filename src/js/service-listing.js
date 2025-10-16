@@ -17,9 +17,5 @@ const lockerList = new ServiceList(category , dataSource, listElement);
 lockerList.init()
 
 
-// dialoge
 
-
-
-// menu
 
